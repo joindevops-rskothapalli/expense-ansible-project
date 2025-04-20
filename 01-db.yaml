@@ -12,10 +12,10 @@
       ansible.builtin.dnf:
         name: mysql-server
         state: latest
-    - name: install and enable mysql server
+    - name: sgtart and enable mysql server
       ansible.builtin.service:
         name: mysqld
-        state: installed
+        state: started
         enabled: yes
     - name: download mysql and python dependencies
       ansible.builtin.pip:
