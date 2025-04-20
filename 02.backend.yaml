@@ -1,7 +1,7 @@
 - name: configure backend server
   hosts: backend
   become: yes
-  login_host: db.rskothapalli.store
+  login_host: backend.rskothapalli.store
   login_password: ExpenseApp@1
 
   tasks:
