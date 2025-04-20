@@ -2,7 +2,7 @@
   hosts: backend
   become: yes
   vars: 
-    login_host: backend.rskothapalli.store
+    login_host: db.rskothapalli.store
     login_password: ExpenseApp@1
 
   tasks:
@@ -25,7 +25,7 @@
         path: /app
         state: directory
     - name: download backend code
-      ansible.builtin.get_url:
+      ansible.builtin.get_url:  
         url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
         dest: /tmp/backend.zip
     - name: unzip back end code
