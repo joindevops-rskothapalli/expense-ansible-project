@@ -8,7 +8,7 @@
         name: nginx
         state: latest
     - name: start and enable nginx
-      ansible.builtin.dnf:
+      ansible.builtin.service:
         name: nginx
         state: started
         enabled: yes
